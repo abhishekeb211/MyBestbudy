@@ -1,0 +1,229 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Academic Stress - PCCOE Wellness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#ffffff",
+                      "surface-variant": "#e1e3e3",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#d9dada",
+                      "outline": "#6f797c",
+                      "outline-variant": "#bec8cb",
+                      "on-secondary-container": "#4f6a5b",
+                      "surface": "#f8f9f9",
+                      "primary-fixed": "#a9edff",
+                      "on-tertiary-fixed": "#360f00",
+                      "on-secondary-fixed": "#052014",
+                      "surface-container-highest": "#e1e3e3",
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#f3f4f4",
+                      "on-error": "#ffffff",
+                      "on-surface": "#191c1c",
+                      "on-primary-container": "#f3fcff",
+                      "secondary-fixed-dim": "#afcebb",
+                      "inverse-primary": "#87d2e4",
+                      "surface-container-high": "#e7e8e8",
+                      "on-tertiary-fixed-variant": "#70361b",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#191c1c",
+                      "secondary-fixed": "#cbead6",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "inverse-on-surface": "#f0f1f1",
+                      "surface-container": "#edeeee",
+                      "on-secondary-fixed-variant": "#314c3e",
+                      "background": "#f8f9f9",
+                      "tertiary-fixed": "#ffdbcd",
+                      "on-surface-variant": "#3f484b",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#086878",
+                      "on-tertiary-container": "#fff8f6",
+                      "on-primary-fixed": "#001f26",
+                      "error": "#ba1a1a",
+                      "primary-container": "#2d7d8e",
+                      "primary-fixed-dim": "#87d2e4",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#f8f9f9",
+                      "secondary": "#496455",
+                      "secondary-container": "#cbead6",
+                      "primary": "#006474",
+                      "tertiary": "#88492c",
+                      "on-primary-fixed-variant": "#004e5b",
+                      "inverse-surface": "#2e3131",
+                      "tertiary-container": "#a66142"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "8px",
+                      "xxl": "48px",
+                      "base": "4px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "md": "16px",
+                      "gutter": "16px",
+                      "xl": "32px",
+                      "container-margin": "20px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-lg": ["Montserrat"],
+                      "body-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-lg-mobile": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "display-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Subtle depth shadows */
+        .card-shadow {
+            box-shadow: 0 4px 12px rgba(8, 104, 120, 0.05);
+        }
+        .fab-shadow {
+            box-shadow: 0 8px 20px rgba(8, 104, 120, 0.15);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md pb-safe">
+<!-- Top Navigation (Task-Focused / Linear Flow) -->
+<header class="flex justify-between items-center px-container-margin py-md w-full sticky top-0 z-50 bg-background dark:bg-background">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low transition-colors active:scale-95 duration-150 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">Academic Stress</h1>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-container-margin py-lg space-y-xl max-w-3xl mx-auto w-full">
+<!-- Hero / Introduction -->
+<section class="space-y-md">
+<div class="rounded-xl overflow-hidden mb-md shadow-sm h-48 md:h-64 relative bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="A serene, soft-focus view of a modern university library desk. Stacks of neatly arranged books and a softly glowing tablet are visible. The scene is bathed in warm, gentle morning sunlight streaming through a large window, creating a calm, supportive, and light-mode aesthetic with soft teal and sage green accents. The mood is peaceful and conducive to focused, stress-free study." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKVUKnT_htyIqBWDQGJ5BrkAPoJCwSJypr8JJ9Agro-z4wq-BVIsOetdtcwKy5iSd7nQnxu31CEA72XyldRZZTnArHEb5dh0_EhvtCee8mZCffedABBxsRyFxF0xLsX-xrfB8mXwehYlhXSt23luqUZUxN_d6YON5eOHTcEPmlVk22IatL9Jg5e6GShDDWKKYfIN6D9rjjkePk_ILCGBY55EB9bw3Re5gT9S3BQ_n81ERrBJx4EV6_Ng">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Academic stress is that overwhelming feeling when coursework, exams, or deadlines start to pile up. It's completely normal to feel this pressure, but you don't have to carry it alone. Let's work through it together.
+            </p>
+</section>
+<!-- CBT Intervention -->
+<section class="bg-surface-container-lowest border border-surface-variant rounded-xl p-lg card-shadow">
+<div class="flex items-center gap-sm mb-md">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-md text-headline-lg-mobile md:text-headline-md text-on-surface">CBT Strategy: Thought Reframing</h2>
+</div>
+<p class="text-on-surface-variant mb-md">
+                When stressed, our minds often jump to worst-case scenarios. Let's practice challenging those thoughts.
+            </p>
+<div class="space-y-sm bg-surface p-md rounded-lg border border-surface-dim">
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-error mt-1" data-icon="cancel">cancel</span>
+<div>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-xs">Negative Thought</p>
+<p class="text-on-surface">"If I mess up this assignment, I'm going to fail the whole course."</p>
+</div>
+</div>
+<div class="h-px w-full bg-surface-variant my-sm"></div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-xs">Reframed Thought</p>
+<p class="text-on-surface font-medium">"This assignment is just one part of my grade. I will do my best, and I can seek help if I struggle."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- REBT Intervention -->
+<section class="bg-surface-container-lowest border border-surface-variant rounded-xl p-lg card-shadow">
+<div class="flex items-center gap-sm mb-md">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="balance">balance</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-md text-headline-lg-mobile md:text-headline-md text-on-surface">REBT Insight: Preferences vs. Demands</h2>
+</div>
+<p class="text-on-surface-variant mb-md">
+                Using the ABC model, we can change rigid demands ("I MUST get an A") into flexible preferences to reduce anxiety.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="bg-error-container/30 border border-error-container rounded-lg p-md">
+<p class="font-label-sm text-label-sm text-on-error-container uppercase mb-xs">The Demand</p>
+<p class="text-on-surface">"I MUST get a perfect score, otherwise I am a failure."</p>
+</div>
+<div class="bg-secondary-container/50 border border-secondary-container rounded-lg p-md">
+<p class="font-label-sm text-label-sm text-on-secondary-container uppercase mb-xs">The Preference</p>
+<p class="text-on-surface">"I would PREFER to do well, but I can handle it if I don't. My worth isn't tied to one grade."</p>
+</div>
+</div>
+</section>
+<!-- Journal Prompt -->
+
+<!-- Custom Prompt Generator CTA -->
+<section class="bg-gradient-to-br from-primary-container to-surface-tint rounded-xl p-lg text-on-primary-container shadow-lg relative overflow-hidden">
+<!-- Decorative bg element -->
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-white opacity-5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-lg">
+<div class="space-y-sm flex-1">
+<div class="flex items-center gap-sm mb-xs">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<h2 class="font-headline-lg-mobile md:font-headline-md text-headline-lg-mobile md:text-headline-md text-on-primary-container">Generate Your AI Support Prompt</h2>
+</div>
+<p class="text-on-primary-container/90 font-body-lg text-body-lg">
+                        Ready to talk? Create a personalized prompt to start a structured conversation with our AI wellness assistant.
+                    </p>
+</div>
+<button class="w-full md:w-auto bg-surface-container-lowest text-primary hover:bg-surface-container-low px-lg py-md rounded-full font-label-md text-label-md shadow-sm transition-transform active:scale-95 flex items-center justify-center gap-sm whitespace-nowrap">
+<span class="material-symbols-outlined" data-icon="magic_button">magic_button</span>
+                    Generate Prompt
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer / Safety Indicator -->
+<footer class="mt-auto py-lg text-center">
+<div class="flex items-center justify-center gap-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="lock">lock</span>
+<span class="">End-to-End Encrypted &amp; Private</span>
+</div>
+</footer>
+
+
+</body></html>

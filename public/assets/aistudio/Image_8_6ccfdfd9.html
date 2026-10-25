@@ -1,0 +1,348 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Academic Stress Questionnaire</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f0f1f1",
+                        "outline": "#6f797c",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f8f9f9",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d9dada",
+                        "on-surface-variant": "#3f484b",
+                        "on-secondary-fixed": "#052014",
+                        "secondary": "#496455",
+                        "on-secondary-container": "#4f6a5b",
+                        "secondary-fixed": "#cbead6",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#afcebb",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#314c3e",
+                        "on-tertiary-container": "#fff8f6",
+                        "surface-variant": "#e1e3e3",
+                        "inverse-primary": "#87d2e4",
+                        "on-primary-fixed": "#001f26",
+                        "tertiary": "#88492c",
+                        "outline-variant": "#bec8cb",
+                        "surface-container-highest": "#e1e3e3",
+                        "surface-container": "#edeeee",
+                        "primary-container": "#2d7d8e",
+                        "surface-tint": "#086878",
+                        "surface-container-high": "#e7e8e8",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#004e5b",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#006474",
+                        "primary-fixed": "#a9edff",
+                        "tertiary-container": "#a66142",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#cbead6",
+                        "inverse-surface": "#2e3131",
+                        "surface-container-low": "#f3f4f4",
+                        "primary-fixed-dim": "#87d2e4",
+                        "surface": "#f8f9f9",
+                        "tertiary-fixed": "#ffdbcd",
+                        "on-primary-container": "#f3fcff",
+                        "on-surface": "#191c1c",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-background": "#191c1c",
+                        "background": "#f8f9f9",
+                        "on-tertiary-fixed-variant": "#70361b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "20px",
+                        "xs": "4px",
+                        "md": "16px",
+                        "gutter": "16px",
+                        "xl": "32px",
+                        "xxl": "48px",
+                        "base": "4px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .step-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .step-content.active {
+            display: block;
+            opacity: 1;
+        }
+        /* Custom Checkbox Styles */
+        .custom-checkbox input:checked + div {
+            background-color: theme('colors.primary-container');
+            border-color: theme('colors.primary');
+            color: theme('colors.on-primary-container');
+        }
+        .custom-checkbox input:checked + div span {
+            color: theme('colors.on-primary-container');
+        }
+        
+        /* Custom Radio Styles */
+        .custom-radio input:checked + div {
+            background-color: theme('colors.primary-container');
+            border-color: theme('colors.primary');
+            color: theme('colors.on-primary-container');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation (Shell suppressed as per intent logic for Transactional/Onboarding) -->
+<header class="flex justify-between items-center px-container-margin py-md w-full sticky top-0 z-50 bg-background dark:bg-background">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="spa" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary tracking-tight">PCCOE Wellness</span>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-95 duration-150 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</header>
+<main class="flex-grow flex flex-col items-center px-container-margin py-lg md:py-xxl w-full max-w-2xl mx-auto">
+<!-- Progress Indicator -->
+<div class="w-full mb-lg md:mb-xxl">
+<div class="flex justify-between items-center mb-sm">
+<span class="font-label-md text-label-md text-outline">Step <span id="current-step-display" class="">1</span> of 5</span>
+<span class="font-label-md text-label-md text-outline">Academic Stress</span>
+</div>
+<div class="h-2 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-300 ease-out" id="progress-bar" style="width: 20%;"></div>
+</div>
+</div>
+<!-- Heading -->
+<div class="w-full mb-lg text-center">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-sm">Let's Craft a personalised prompt for you</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We will ask you a few questions and your prompt would be ready. You can then start chatting with LLM</p>
+</div>
+<!-- Form Container -->
+<div class="w-full bg-surface-container-lowest rounded-3xl p-lg md:p-xl shadow-[0_4px_24px_rgba(0,100,116,0.05)] border border-surface-variant relative overflow-hidden">
+<form id="questionnaire-form" onsubmit="event.preventDefault();">
+<!-- Step 1: Symptoms -->
+<div class="step-content active" id="step-1">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-lg">What are you experiencing?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Select all that apply to you recently.</p>
+<div class="space-y-sm">
+<label class="custom-checkbox block cursor-pointer group">
+<input class="sr-only" name="symptoms" type="checkbox" value="procrastination">
+<div class="flex items-center justify-between p-md rounded-xl border border-outline-variant bg-surface group-hover:bg-surface-container-low transition-colors duration-200">
+<span class="font-body-md text-body-md text-on-surface">Procrastination</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="pending_actions">pending_actions</span>
+</div>
+</label>
+<label class="custom-checkbox block cursor-pointer group">
+<input class="sr-only" name="symptoms" type="checkbox" value="concentration">
+<div class="flex items-center justify-between p-md rounded-xl border border-outline-variant bg-surface group-hover:bg-surface-container-low transition-colors duration-200">
+<span class="font-body-md text-body-md text-on-surface">Difficulty Concentrating</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="psychology_alt">psychology_alt</span>
+</div>
+</label>
+<label class="custom-checkbox block cursor-pointer group">
+<input class="sr-only" name="symptoms" type="checkbox" value="worrying">
+<div class="flex items-center justify-between p-md rounded-xl border border-outline-variant bg-surface group-hover:bg-surface-container-low transition-colors duration-200">
+<span class="font-body-md text-body-md text-on-surface">Worrying about Exams</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="assignment_late">assignment_late</span>
+</div>
+</label>
+<label class="custom-checkbox block cursor-pointer group">
+<input class="sr-only" name="symptoms" type="checkbox" value="sleep">
+<div class="flex items-center justify-between p-md rounded-xl border border-outline-variant bg-surface group-hover:bg-surface-container-low transition-colors duration-200">
+<span class="font-body-md text-body-md text-on-surface">Trouble Sleeping</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="bedtime_off">bedtime_off</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Step 2: Frequency -->
+<div class="step-content" id="step-2">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-lg">How often does this happen?</h2>
+<div class="space-y-sm">
+<label class="custom-radio block cursor-pointer group">
+<input class="sr-only" name="frequency" type="radio" value="never">
+<div class="flex items-center p-md rounded-xl border border-outline-variant bg-surface group-hover:bg-surface-container-low transition-colors duration-200">
+<span class="font-body-md text-body-md text-on-surface">Rarely</span>
+</div>
+</label>
+<label class="custom-radio block cursor-pointer group">
+<input class="sr-only" name="frequency" type="radio" value="sometimes">
+<div class="flex items-center p-md rounded-xl border border-outline-variant bg-surface group-hover:bg-surface-container-low transition-colors duration-200">
+<span class="font-body-md text-body-md text-on-surface">Sometimes</span>
+</div>
+</label>
+<label class="custom-radio block cursor-pointer group">
+<input class="sr-only" name="frequency" type="radio" value="often">
+<div class="flex items-center p-md rounded-xl border border-outline-variant bg-surface group-hover:bg-surface-container-low transition-colors duration-200">
+<span class="font-body-md text-body-md text-on-surface">Often</span>
+</div>
+</label>
+<label class="custom-radio block cursor-pointer group">
+<input class="sr-only" name="frequency" type="radio" value="always">
+<div class="flex items-center p-md rounded-xl border border-outline-variant bg-surface group-hover:bg-surface-container-low transition-colors duration-200">
+<span class="font-body-md text-body-md text-on-surface">Almost Always</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Step 3: Thoughts -->
+<div class="step-content" id="step-3">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-lg">What thoughts usually occur?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Feel free to share openly. This is a safe space.</p>
+<textarea class="w-full h-32 p-md rounded-xl border-2 border-surface-variant bg-surface focus:border-primary focus:ring-0 focus:outline-none transition-colors duration-200 resize-none font-body-md text-body-md text-on-surface placeholder-outline" placeholder="e.g., I feel like I'm falling behind..."></textarea>
+</div>
+<!-- Step 4: Impact Slider -->
+<div class="step-content" id="step-4">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-lg">How much does this affect your academics?</h2>
+<div class="px-sm py-xl">
+<input class="w-full h-2 bg-surface-variant rounded-lg appearance-none cursor-pointer accent-primary" id="impact-slider" max="10" min="1" oninput="document.getElementById('slider-value').innerText = this.value" type="range" value="5">
+<div class="flex justify-between items-center mt-md">
+<span class="font-label-sm text-label-sm text-outline">Mild</span>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-headline-md text-headline-md-mobile" id="slider-value">5</div>
+<span class="font-label-sm text-label-sm text-outline">Severe</span>
+</div>
+</div>
+</div>
+<!-- Step 5: Triggers -->
+<div class="step-content" id="step-5">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-lg">What usually triggers this?</h2>
+<div class="flex flex-wrap gap-sm">
+<label class="custom-checkbox cursor-pointer group">
+<input class="sr-only" name="triggers" type="checkbox" value="deadlines">
+<div class="px-md py-sm rounded-full border border-outline-variant bg-surface group-hover:bg-surface-container-low transition-colors duration-200">
+<span class="font-body-md text-body-md text-on-surface">Upcoming Deadlines</span>
+</div>
+</label>
+<label class="custom-checkbox cursor-pointer group">
+<input class="sr-only" name="triggers" type="checkbox" value="exams">
+<div class="px-md py-sm rounded-full border border-outline-variant bg-surface group-hover:bg-surface-container-low transition-colors duration-200">
+<span class="font-body-md text-body-md text-on-surface">Exam Periods</span>
+</div>
+</label>
+<label class="custom-checkbox cursor-pointer group">
+<input class="sr-only" name="triggers" type="checkbox" value="expectations">
+<div class="px-md py-sm rounded-full border border-outline-variant bg-surface group-hover:bg-surface-container-low transition-colors duration-200">
+<span class="font-body-md text-body-md text-on-surface">Family Expectations</span>
+</div>
+</label>
+<label class="custom-checkbox cursor-pointer group">
+<input class="sr-only" name="triggers" type="checkbox" value="comparison">
+<div class="px-md py-sm rounded-full border border-outline-variant bg-surface group-hover:bg-surface-container-low transition-colors duration-200">
+<span class="font-body-md text-body-md text-on-surface">Comparing with Peers</span>
+</div>
+</label>
+</div>
+</div>
+</form>
+</div>
+<!-- Navigation Buttons -->
+<div class="w-full flex justify-between items-center mt-xl">
+<button class="px-lg py-sm rounded-full bg-surface-container-highest text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant transition-colors invisible" id="btn-back" onclick="navigateStep(-1)">
+                Back
+            </button>
+<button class="px-xl py-sm rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary/90 transition-colors shadow-sm active:scale-95 flex items-center gap-2" id="btn-next" onclick="navigateStep(1)">
+                Continue
+                <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Suppressed (Transactional Flow) -->
+<script>
+        let currentStep = 1;
+        const totalSteps = 5;
+
+        function navigateStep(direction) {
+            const currentElement = document.getElementById(`step-${currentStep}`);
+            
+            let newStep = currentStep + direction;
+            if (newStep < 1 || newStep > totalSteps) return;
+
+            // Hide current
+            currentElement.classList.remove('active');
+            
+            // Update step
+            currentStep = newStep;
+            
+            // Show new
+            const newElement = document.getElementById(`step-${currentStep}`);
+            // Small timeout to allow display block to take effect before opacity transition
+            setTimeout(() => {
+                newElement.classList.add('active');
+            }, 50);
+
+            updateUI();
+        }
+
+        function updateUI() {
+            // Update Progress Bar
+            const progress = (currentStep / totalSteps) * 100;
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+            document.getElementById('current-step-display').innerText = currentStep;
+
+            // Update Buttons
+            const btnBack = document.getElementById('btn-back');
+            const btnNext = document.getElementById('btn-next');
+
+            if (currentStep === 1) {
+                btnBack.classList.add('invisible');
+            } else {
+                btnBack.classList.remove('invisible');
+            }
+
+            if (currentStep === totalSteps) {
+                btnNext.innerHTML = 'Finish <span class="material-symbols-outlined text-sm" data-icon="check">check</span>';
+                // Remove onclick and make it submit or redirect
+                btnNext.onclick = () => alert('Questionnaire Complete. Connecting to resources...');
+            } else {
+                btnNext.innerHTML = 'Continue <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>';
+                btnNext.onclick = () => navigateStep(1);
+            }
+        }
+    </script>
+
+
+</body></html>

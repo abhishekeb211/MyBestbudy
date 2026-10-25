@@ -1,0 +1,234 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>PCCOE Student Wellbeing - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#bec8cb",
+                        "primary-fixed": "#a9edff",
+                        "secondary-fixed-dim": "#afcebb",
+                        "surface-container-low": "#f3f4f4",
+                        "secondary": "#496455",
+                        "tertiary-container": "#a66142",
+                        "surface-container-high": "#e7e8e8",
+                        "surface-bright": "#f8f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#cbead6",
+                        "surface-container-highest": "#e1e3e3",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#cbead6",
+                        "surface-container": "#edeeee",
+                        "surface-tint": "#086878",
+                        "on-error-container": "#93000a",
+                        "surface": "#f8f9f9",
+                        "on-primary-fixed": "#001f26",
+                        "primary-fixed-dim": "#87d2e4",
+                        "on-tertiary-container": "#fff8f6",
+                        "primary": "#006474",
+                        "on-primary-container": "#f3fcff",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-background": "#191c1c",
+                        "on-tertiary-fixed-variant": "#70361b",
+                        "on-secondary-container": "#4f6a5b",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-primary-fixed-variant": "#004e5b",
+                        "tertiary": "#88492c",
+                        "on-secondary-fixed": "#052014",
+                        "tertiary-fixed": "#ffdbcd",
+                        "surface-dim": "#d9dada",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#3f484b",
+                        "background": "#f8f9f9",
+                        "on-surface": "#191c1c",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#360f00",
+                        "surface-variant": "#e1e3e3",
+                        "primary-container": "#2d7d8e",
+                        "inverse-primary": "#87d2e4",
+                        "on-secondary-fixed-variant": "#314c3e",
+                        "inverse-surface": "#2e3131",
+                        "outline": "#6f797c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "sm": "8px",
+                        "container-margin": "20px",
+                        "gutter": "16px",
+                        "xxl": "48px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "lg": "24px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar from JSON -->
+<header class="bg-background dark:bg-background flex justify-between items-center px-container-margin py-md w-full sticky top-0 z-50">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="spa" data-weight="fill">spa</span>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">PCCOE Wellness</h1>
+</div>
+<!-- Web Nav Cluster (Hidden on mobile) -->
+<nav class="hidden md:flex items-center gap-xl">
+<a class="flex items-center gap-xs text-primary font-bold hover:bg-surface-container-low transition-colors active:scale-95 duration-150 px-sm py-xs rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-95 duration-150 px-sm py-xs rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-md text-label-md">Explore</span>
+</a>
+<a class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-95 duration-150 px-sm py-xs rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="font-label-md text-label-md">Journal</span>
+</a>
+<a class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-95 duration-150 px-sm py-xs rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-label-md text-label-md">Progress</span>
+</a>
+<a class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-95 duration-150 px-sm py-xs rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+<button class="bg-error text-on-error font-label-md text-label-md px-md py-sm rounded-full flex items-center gap-xs hover:bg-on-error-container transition-colors shadow-sm active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[18px]" data-icon="call">call</span>
+            GET HELP
+        </button>
+</header>
+<main class="flex-1 px-container-margin py-xl flex flex-col gap-xl max-w-5xl mx-auto w-full pb-[100px] md:pb-xl">
+<!-- Greeting -->
+<section class="flex flex-col gap-xs">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">Good morning, Arjun.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We're glad you're here. Let's take a moment for yourself.</p>
+</section>
+<!-- Mood Check-in -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-[32px] p-xl flex flex-col items-center gap-lg shadow-[0_4px_12px_rgba(8,104,120,0.05)]">
+<h3 class="font-headline-md text-headline-md text-on-surface text-center">How are you feeling today?</h3>
+<div class="flex justify-between w-full max-w-md gap-sm">
+<button class="flex flex-col items-center gap-xs hover:scale-110 transition-transform duration-200 group">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[32px] text-on-surface-variant group-hover:text-on-primary-container" data-icon="sentiment_very_dissatisfied">sentiment_very_dissatisfied</span>
+</div>
+</button>
+<button class="flex flex-col items-center gap-xs hover:scale-110 transition-transform duration-200 group">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[32px] text-on-surface-variant group-hover:text-on-primary-container" data-icon="sentiment_dissatisfied">sentiment_dissatisfied</span>
+</div>
+</button>
+<button class="flex flex-col items-center gap-xs hover:scale-110 transition-transform duration-200 group">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[32px] text-on-surface-variant group-hover:text-on-primary-container" data-icon="sentiment_neutral">sentiment_neutral</span>
+</div>
+</button>
+<button class="flex flex-col items-center gap-xs hover:scale-110 transition-transform duration-200 group">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[32px] text-on-surface-variant group-hover:text-on-primary-container" data-icon="sentiment_satisfied">sentiment_satisfied</span>
+</div>
+</button>
+<button class="flex flex-col items-center gap-xs hover:scale-110 transition-transform duration-200 group">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[32px] text-on-surface-variant group-hover:text-on-primary-container" data-icon="sentiment_very_satisfied">sentiment_very_satisfied</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Quick Check-in Prompt -->
+
+<!-- Bento Grid / Cards -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Recommended Content -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-[24px] overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300">
+<div class="h-40 w-full bg-surface-variant relative">
+<div class="bg-cover bg-center w-full h-full absolute inset-0" data-alt="A serene, soft-focus image of a tidy, modern student desk with a small potted succulent and open notebook, bathed in warm, gentle morning sunlight. The aesthetic is calm, organized, and optimistic, utilizing soft teal and warm white tones." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBpo17N3_XruUldFBN9UEE5NzLdBc0-Hfv7qgQgrdQEN9np2AapJ_GQFobSstLLWDt-Fo_bHd8yy-QLF4P4YafK5pBzKKedaUjzGyGpGezX77eo4rSM1uuLHkrUgqZsOgBRrSRyACT3pzF1yEWui24XpE8W7Q6OdJqasyxOhyf9qoLoaXv2PbW4W2xjMlRDUmIKrwFX-YdQTDmvV-J7iUEr1vq-djWqnNOQdTlWesSbn7tl4htzX-rdsg&quot;);"></div>
+</div>
+<div class="p-md flex flex-col gap-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Recommended Article</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Managing Placement Anxiety</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Practical steps to stay grounded and focused during the placement season.</p>
+</div>
+</div>
+<!-- Continue Exercise -->
+
+</section>
+<!-- Emergency Support Footer Card -->
+
+<!-- Privacy Reminder -->
+<div class="flex items-center justify-center gap-xs text-outline mt-md">
+<span class="material-symbols-outlined text-[16px]" data-icon="lock">lock</span>
+<span class="font-label-sm text-label-sm">Your data is private and secure.</span>
+</div>
+</main>
+<!-- BottomNavBar from JSON (Mobile only) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface-container-lowest dark:bg-inverse-surface shadow-[0_-4px_12px_rgba(8,104,120,0.1)] rounded-t-xl md:hidden">
+<!-- Active Nav Item -->
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-on-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed rounded-full px-4 py-1 hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill">home</span>
+<span class="font-label-sm text-label-sm mt-xs">Home</span>
+</a>
+<!-- Inactive Nav Items -->
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant px-4 py-1 hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-sm text-label-sm mt-xs">Explore</span>
+</a>
+
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant px-4 py-1 hover:text-primary transition-all active:scale-90 duration-200" href="#"><span class="material-symbols-outlined" data-icon="spa">spa</span><span class="font-label-sm text-label-sm mt-xs">Issues</span></a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant px-4 py-1 hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm mt-xs">Profile</span>
+</a>
+</nav>
+
+
+
+
+</body></html>

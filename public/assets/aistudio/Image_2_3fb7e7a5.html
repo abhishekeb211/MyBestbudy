@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>PCCOE Wellness - Explore Issues</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Inter & Montserrat -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#bec8cb",
+                        "primary-fixed": "#a9edff",
+                        "secondary-fixed-dim": "#afcebb",
+                        "surface-container-low": "#f3f4f4",
+                        "secondary": "#496455",
+                        "tertiary-container": "#a66142",
+                        "surface-container-high": "#e7e8e8",
+                        "surface-bright": "#f8f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#cbead6",
+                        "surface-container-highest": "#e1e3e3",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#cbead6",
+                        "surface-container": "#edeeee",
+                        "surface-tint": "#086878",
+                        "on-error-container": "#93000a",
+                        "surface": "#f8f9f9",
+                        "on-primary-fixed": "#001f26",
+                        "primary-fixed-dim": "#87d2e4",
+                        "on-tertiary-container": "#fff8f6",
+                        "primary": "#006474",
+                        "on-primary-container": "#f3fcff",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-background": "#191c1c",
+                        "on-tertiary-fixed-variant": "#70361b",
+                        "on-secondary-container": "#4f6a5b",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-primary-fixed-variant": "#004e5b",
+                        "tertiary": "#88492c",
+                        "on-secondary-fixed": "#052014",
+                        "tertiary-fixed": "#ffdbcd",
+                        "surface-dim": "#d9dada",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#3f484b",
+                        "background": "#f8f9f9",
+                        "on-surface": "#191c1c",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#360f00",
+                        "surface-variant": "#e1e3e3",
+                        "primary-container": "#2d7d8e",
+                        "inverse-primary": "#87d2e4",
+                        "on-secondary-fixed-variant": "#314c3e",
+                        "inverse-surface": "#2e3131",
+                        "outline": "#6f797c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "sm": "8px",
+                        "container-margin": "20px",
+                        "gutter": "16px",
+                        "xxl": "48px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "lg": "24px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom scrollbar for horizontal filters to keep UI clean */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased pb-24 selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-container-margin py-md w-full sticky top-0 z-50 bg-background dark:bg-background">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" style="font-variation-settings: &quot;FILL&quot; 1;">spa</span>
+<h1 class="font-headline-md text-headline-md-mobile text-primary dark:text-primary-fixed-dim tracking-tight m-0">PCCOE Wellness</h1>
+</div>
+<button class="flex items-center gap-xs px-4 py-2 bg-error text-on-error rounded-full shadow-sm hover:bg-error-container hover:text-on-error-container transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined font-label-sm text-label-sm" style="font-variation-settings: &quot;FILL&quot; 1;">phone</span>
+<span class="font-label-sm text-label-sm">GET HELP</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="px-container-margin pt-md pb-xxl max-w-7xl mx-auto flex flex-col gap-xl">
+<!-- Header & Intro -->
+<section class="flex flex-col gap-sm text-center md:text-left mt-sm">
+<h2 class="font-display-lg text-display-lg text-on-surface">Explore Issues</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Find resources, understand your feelings, and take the first step towards better mental well-being.</p>
+</section>
+<!-- Disclaimer Banner -->
+<div class="bg-surface-container-low border border-outline-variant rounded-lg p-md flex items-start gap-md shadow-sm">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-xs">info</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Note:</span> The information provided here is for educational purposes and self-reflection. You may be experiencing these feelings, but this is non-diagnostic. If you feel overwhelmed, please reach out for professional support.
+            </p>
+</div>
+<!-- Search & Filters -->
+<section class="flex flex-col gap-md sticky top-[72px] z-40 bg-background pt-sm pb-md shadow-[0_8px_16px_-12px_rgba(0,0,0,0.05)]">
+<!-- Search Bar -->
+<div class="relative w-full max-w-3xl">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface-container-highest border-transparent rounded-full py-3 pl-12 pr-4 font-body-md text-on-surface placeholder:text-outline-variant focus:border-primary focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all shadow-inner" placeholder="Search for issues, feelings, or resources..." type="text">
+</div>
+<!-- Category Filters (Horizontal Scroll) -->
+<div class="flex items-center gap-sm overflow-x-auto hide-scrollbar snap-x pb-2">
+<button class="snap-start shrink-0 px-5 py-2 rounded-full font-label-md text-label-md bg-secondary text-on-secondary shadow-sm transition-transform active:scale-95 duration-150">All Topics</button>
+<button class="snap-start shrink-0 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors active:scale-95 duration-150">Academic</button>
+<button class="snap-start shrink-0 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors active:scale-95 duration-150">Emotional</button>
+<button class="snap-start shrink-0 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors active:scale-95 duration-150">Social</button>
+<button class="snap-start shrink-0 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors active:scale-95 duration-150">Career</button>
+<button class="snap-start shrink-0 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors active:scale-95 duration-150">Safety</button>
+</div>
+</section>
+<!-- Issues Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Card 1: Academic Stress -->
+<article class="bg-surface-container-lowest rounded-xl border border-surface-variant overflow-hidden flex flex-col hover:shadow-md transition-shadow duration-300 group">
+<div class="h-32 w-full bg-cover bg-center" data-alt="A soft, abstract digital illustration representing academic focus. Gentle, flowing lines in pale teal and warm white intermingle, creating a sense of organized calm amidst structure. The lighting is diffused and modern, embodying a light-mode, empathetic and supportive aesthetic that reduces cognitive load." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDjVgf4v3U8YUkg66P7HdnvQsLNRN2aDpdbrFI008nQHBDD-wjpJ7u5RL0L0mTMdvPrybsmzM-zqBgmsv5MUjysr50RH9PUhii6mHv0CrOg9bUeOUJYPQJxQYTK0jpOqFwJvPCmdK0QGAhF5yupNKBHsVMRCN43uPqWe6jdHqebXk_NmFlCC6EqGQ6PjnCWNwMikUtU3RjlhM1syHCtRPH1d7YNDIkKwYzzAVW2UdoVhuKZyWMw9BaoQw&quot;);"></div>
+<div class="p-lg flex flex-col flex-grow gap-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Academic Stress</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                        Feeling overwhelmed by coursework, exams, or project deadlines. It's common to feel pressure to perform, which can impact sleep and focus.
+                    </p>
+<div class="mt-auto pt-sm flex gap-sm items-center">
+
+<button class="flex-1 font-label-md text-label-md text-on-primary bg-primary rounded-lg py-2 hover:bg-on-primary-fixed-variant transition-colors shadow-sm active:scale-95 duration-150">Start Support</button>
+</div>
+</div>
+</article>
+<!-- Card 2: Anxiety -->
+<article class="bg-surface-container-lowest rounded-xl border border-surface-variant overflow-hidden flex flex-col hover:shadow-md transition-shadow duration-300 group">
+<div class="h-32 w-full bg-cover bg-center" data-alt="A calming, abstract digital painting featuring soft concentric waves rippling outwards in very light sage green and pristine white. The forms are exceptionally smooth and rounded, representing a soothing breath. The visual style is modern, therapeutic, and heavily relies on high-key lighting to foster a safe emotional space." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCPExWt3rAQ6_XDGwuJ2wPMSbUOcWlWt5is2EllDEiIGdUzdCSwCyhqLbxk2YJLKASAWYCsteEa0wKgjOkXT9v07fHT8pu5RhCUiRKnbNPmQP3equG0NkNTrcI_xFqewCXPj6EVZEz5ShYcBIO8dcOqHEWnIZPoy3hI_jzzWzG9t70iChh08B6cYVFWBQSTp4NJhwRkup3zIPP3mayUvL-WPyjzlYliV8qC1ruSJwR9q7466bCLR3eJrw&quot;);"></div>
+<div class="p-lg flex flex-col flex-grow gap-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Anxiety</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                        Experiencing persistent worry, racing thoughts, or physical symptoms like a fast heartbeat. It can make everyday situations feel daunting.
+                    </p>
+<div class="mt-auto pt-sm flex gap-sm items-center">
+
+<button class="flex-1 font-label-md text-label-md text-on-primary bg-primary rounded-lg py-2 hover:bg-on-primary-fixed-variant transition-colors shadow-sm active:scale-95 duration-150">Start Support</button>
+</div>
+</div>
+</article>
+<!-- Card 3: Depression -->
+<article class="bg-surface-container-lowest rounded-xl border border-surface-variant overflow-hidden flex flex-col hover:shadow-md transition-shadow duration-300 group">
+<div class="h-32 w-full bg-cover bg-center" data-alt="A serene, minimalist 3D rendering of soft cloud-like shapes floating in an expansive, bright off-white space. Subtle hints of warm peach light touch the edges of the forms, suggesting hope and morning light. The composition is highly breathable and tactile, employing a modern wellness aesthetic to create a sense of gentle uplift." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAg9MFJt7vPEGUA7X7DtCcpWJ8jVdncwOAE1_wUadz2tKEbrRQvZVwqRjqD9tj_1rehewvTla8VrGy39VrPujWFS3JbaDuuJ9RNpXB1q4XrJxuZla-8WksjLHKAl1HmUvXkjje009GXucjcA4IlZIWIoG33kB4uvAJW-y5XKdzVRBr_v1E-rvD9u0n3kR3eBxDXAbkhOOpAZgMmhztuNgrOaukFjuySAb5R_-qPkfZnr1oCBQCJBiYHOg&quot;);"></div>
+<div class="p-lg flex flex-col flex-grow gap-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined">cloud</span>
+</div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Depression</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                        A prolonged sense of sadness, loss of interest in activities you usually enjoy, or feeling a lack of energy and motivation.
+                    </p>
+<div class="mt-auto pt-sm flex gap-sm items-center">
+
+<button class="flex-1 font-label-md text-label-md text-on-primary bg-primary rounded-lg py-2 hover:bg-on-primary-fixed-variant transition-colors shadow-sm active:scale-95 duration-150">Start Support</button>
+</div>
+</div>
+</article>
+<!-- Card 4: Social Anxiety -->
+<article class="bg-surface-container-lowest rounded-xl border border-surface-variant overflow-hidden flex flex-col hover:shadow-md transition-shadow duration-300 group">
+<div class="h-32 w-full bg-cover bg-center" data-alt="An abstract visualization of connection, featuring soft, glowing nodes gently linking together over a very light grey and soft white background. The lines are curved and friendly, avoiding sharp angles. The overall aesthetic feels safe, private, and optimistic, adhering to a high-end, empathetic modernism style suitable for a wellness app." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAvxx0kjHjr9V1MjkUUgAof6ob4vqmeGPCznDht0fsvxBxD6xL3mJSY_X1gYIfV2mkBd2GyoZ49tXHZBghxXOO4bHQMniseBMRBXJpf-OFh9F6J7vWAaGhvzJ_NM2QEXD2n5WywWUeDSmh5gSm9cTFkyk6Bg7yFVicn1ZXcFJcl5_ummP627Dgdog6jrVroSz0AMNKrMSMTWO2aQMK0eartq5eFS53ZqR6DJGBVbhldb6yGKQhMU-yGmw&quot;);"></div>
+<div class="p-lg flex flex-col flex-grow gap-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Social Anxiety</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                        Intense fear of being judged or scrutinized in social situations, leading to avoidance of peer interactions or public speaking.
+                    </p>
+<div class="mt-auto pt-sm flex gap-sm items-center">
+
+<button class="flex-1 font-label-md text-label-md text-on-primary bg-primary rounded-lg py-2 hover:bg-on-primary-fixed-variant transition-colors shadow-sm active:scale-95 duration-150">Start Support</button>
+</div>
+</div>
+</article>
+<!-- Card 5: Loneliness -->
+<article class="bg-surface-container-lowest rounded-xl border border-surface-variant overflow-hidden flex flex-col hover:shadow-md transition-shadow duration-300 group">
+<div class="h-32 w-full bg-cover bg-center" data-alt="A delicate, minimalist digital artwork showing a single, soft, glowing orb resting gently within a larger, supportive cupped shape. The colors are muted, relying on white and a whisper of teal-light to create depth through tonal layering rather than harsh shadows. The image conveys comfort, safety, and modern tactile warmth." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBbmHejOUL_jNNIa0fCjRqhPL2bZVM0mGIDKfYwV9q_T1BrtIFn7zTipN4BlAFSb7H-5EXs5s0CJTMWwwpbYPVLEp2NGm6qKzoIog_zEJCW_wPgnXiQyBXGAiA9iHP30QeUvJ30jDJZ5B-6Ok_4iVVGIFgttFvgxWK7QeOca5XEHL4jqlHyJY4PPi5aLa5X3LE8fgtG6VPjN-ucrXVcTjkqDeOIonZiMgfHbKeNoG1bcojLrFBG5P9z1w&quot;);"></div>
+<div class="p-lg flex flex-col flex-grow gap-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">person</span>
+</div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Loneliness</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                        Feeling disconnected from others, even when surrounded by people. A sense of isolation or lacking meaningful, close relationships.
+                    </p>
+<div class="mt-auto pt-sm flex gap-sm items-center">
+
+<button class="flex-1 font-label-md text-label-md text-on-primary bg-primary rounded-lg py-2 hover:bg-on-primary-fixed-variant transition-colors shadow-sm active:scale-95 duration-150">Start Support</button>
+</div>
+</div>
+</article>
+<!-- Card 6: Career Anxiety -->
+<article class="bg-surface-container-lowest rounded-xl border border-surface-variant overflow-hidden flex flex-col hover:shadow-md transition-shadow duration-300 group">
+<div class="h-32 w-full bg-cover bg-center" data-alt="A soft, abstract geometric pattern representing paths and forward movement. Mild, rounded lines in deep teal and warm white weave upward in a non-linear, forgiving way. The visual space feels expansive and uncluttered, utilizing empathetic modernism to reduce stress and offer a sense of quiet optimism about the future." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBz7-s28bafrtcaLqNetfsbBBrezz2gFb6gR_JSsG5fNS8sgdPj3lXgrdFtyXMysHFVubrorOjObgb5BHyststP2C0akwP-U9IA0iNmnn0lyUg6VCNTFl5un1U-z-e-surY-6cCA0cSWkNzvgqkm_XeDx5MJHee1A4qidcvqGJVAjUERnPjkJtP8eiSnGT7w06aJnhSU5lykWyMcy0EAXGtJUvZ6ZckxGrsHUUv0za11OxGy5a6GjYwiw&quot;);"></div>
+<div class="p-lg flex flex-col flex-grow gap-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined">work</span>
+</div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Career Anxiety</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                        Uncertainty or severe stress regarding future job prospects, placements, or choosing the 'right' career path in engineering.
+                    </p>
+<div class="mt-auto pt-sm flex gap-sm items-center">
+
+<button class="flex-1 font-label-md text-label-md text-on-primary bg-primary rounded-lg py-2 hover:bg-on-primary-fixed-variant transition-colors shadow-sm active:scale-95 duration-150">Start Support</button>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface-container-lowest dark:bg-inverse-surface shadow-[0_-4px_12px_rgba(8,104,120,0.1)] docked full-width bottom-0 rounded-t-xl md:hidden">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant px-4 py-1 hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<!-- Explore (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-on-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed rounded-full px-4 py-1 hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]" style="font-variation-settings: &quot;FILL&quot; 1;">search</span>
+<span class="font-label-sm text-label-sm">Explore</span>
+</a>
+<!-- Journal -->
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant px-4 py-1 hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]">edit_note</span>
+<span class="font-label-sm text-label-sm">Journal</span>
+</a>
+<!-- Progress -->
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant px-4 py-1 hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]">insights</span>
+<span class="font-label-sm text-label-sm">Progress</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant px-4 py-1 hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+
+
+</body></html>

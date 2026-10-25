@@ -1,0 +1,8 @@
+{
+  "name": "PCCOE Wellness - My Best Buddy",
+  "description": "An empathetic student mental health & wellness companion for PCCOE students featuring CBT & REBT thought reframing, personalized AI support prompt crafting, interactive issue discovery, daily mood check-ins, grounding breathing tools, and immediate confidential crisis support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

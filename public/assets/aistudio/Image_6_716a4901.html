@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PCCOE Student Wellbeing - Master Prompt Result</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#bec8cb",
+                      "primary-fixed": "#a9edff",
+                      "secondary-fixed-dim": "#afcebb",
+                      "surface-container-low": "#f3f4f4",
+                      "secondary": "#496455",
+                      "tertiary-container": "#a66142",
+                      "surface-container-high": "#e7e8e8",
+                      "surface-bright": "#f8f9f9",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#cbead6",
+                      "surface-container-highest": "#e1e3e3",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#cbead6",
+                      "surface-container": "#edeeee",
+                      "surface-tint": "#086878",
+                      "on-error-container": "#93000a",
+                      "surface": "#f8f9f9",
+                      "on-primary-fixed": "#001f26",
+                      "primary-fixed-dim": "#87d2e4",
+                      "on-tertiary-container": "#fff8f6",
+                      "primary": "#006474",
+                      "on-primary-container": "#f3fcff",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "on-background": "#191c1c",
+                      "on-tertiary-fixed-variant": "#70361b",
+                      "on-secondary-container": "#4f6a5b",
+                      "inverse-on-surface": "#f0f1f1",
+                      "on-primary-fixed-variant": "#004e5b",
+                      "tertiary": "#88492c",
+                      "on-secondary-fixed": "#052014",
+                      "tertiary-fixed": "#ffdbcd",
+                      "surface-dim": "#d9dada",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "on-primary": "#ffffff",
+                      "on-surface-variant": "#3f484b",
+                      "background": "#f8f9f9",
+                      "on-surface": "#191c1c",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed": "#360f00",
+                      "surface-variant": "#e1e3e3",
+                      "primary-container": "#2d7d8e",
+                      "inverse-primary": "#87d2e4",
+                      "on-secondary-fixed-variant": "#314c3e",
+                      "inverse-surface": "#2e3131",
+                      "outline": "#6f797c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "16px",
+                      "sm": "8px",
+                      "container-margin": "20px",
+                      "gutter": "16px",
+                      "xxl": "48px",
+                      "xs": "4px",
+                      "xl": "32px",
+                      "lg": "24px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-lg-mobile": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "label-md": ["Inter"],
+                      "display-lg": ["Montserrat"],
+                      "body-lg": ["Inter"],
+                      "headline-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen antialiased selection:bg-primary-container selection:text-on-primary-container pb-xxl">
+<!-- TopAppBar -->
+<header class="bg-background dark:bg-background w-full sticky top-0 z-50 flex justify-between items-center px-container-margin py-md flat no shadows">
+<div class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low transition-colors active:scale-95 duration-150 cursor-pointer text-on-surface-variant">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">spa</span>
+</div>
+<h1 class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">
+            PCCOE Wellness
+        </h1>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:bg-surface-container-low transition-colors active:scale-95 duration-150 px-4 py-2 rounded-full">
+            GET HELP
+        </button>
+</header>
+<!-- Main Content Canvas -->
+<main class="px-container-margin max-w-3xl mx-auto mt-lg md:mt-xl">
+<!-- Header Section -->
+<section class="mb-lg">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-background mb-sm">Your Personalized Support Prompt</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">This prompt summarizes your responses to help you have a structured conversation with ChatGPT or Gemini. Copy and paste it to get started.</p>
+</section>
+<!-- Master Prompt Viewer (Document Style) -->
+<section class="relative bg-surface border border-outline-variant rounded-xl p-md md:p-lg mb-xl shadow-sm overflow-hidden">
+<!-- Decorative soft background element -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary-fixed opacity-30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex justify-between items-start mb-md">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">description</span>
+                    Generated Prompt
+                </div>
+<button aria-label="Copy to clipboard" class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 p-1 rounded-md" title="Copy to clipboard">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest border border-surface-variant rounded-lg p-md">
+<p class="font-body-md text-body-md text-on-surface whitespace-pre-wrap leading-relaxed selection:bg-secondary-container">You are an evidence-informed mental health support AI. I am an engineering student at PCCOE.
+
+I am currently experiencing <span class="font-medium text-primary">Academic Stress</span> related to upcoming exams and project deadlines. Over the last two weeks, I have been feeling overwhelmed, anxious, and have had difficulty sleeping.
+
+My primary goal for this conversation is to find practical time-management techniques and simple grounding exercises to help manage acute stress moments.
+
+Please provide compassionate, actionable advice structured in short, easy-to-read steps. Avoid clinical diagnoses.</p>
+</div>
+</section>
+<!-- Action Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md mb-lg">
+<!-- Primary Action -->
+<button class="w-full flex items-center justify-center gap-sm bg-primary text-on-primary py-3 px-4 rounded-full font-label-md text-label-md shadow-sm hover:shadow-md hover:bg-on-primary-fixed transition-all active:scale-95 duration-150 min-h-[44px]">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+                Copy Prompt
+            </button>
+<!-- Save Action -->
+<button class="w-full flex items-center justify-center gap-sm bg-secondary-container text-on-secondary-container py-3 px-4 rounded-full font-label-md text-label-md hover:bg-secondary-fixed-dim transition-colors active:scale-95 duration-150 min-h-[44px]">
+<span class="material-symbols-outlined text-[20px]">bookmark_add</span>
+                Save to Profile
+            </button>
+<!-- External AI Actions -->
+<div class="md:col-span-2 grid grid-cols-2 gap-md">
+<button class="w-full flex items-center justify-center gap-sm bg-surface-container border border-outline-variant text-on-surface py-3 px-4 rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors active:scale-95 duration-150 min-h-[44px]">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+                    Open ChatGPT
+                </button>
+<button class="w-full flex items-center justify-center gap-sm bg-surface-container border border-outline-variant text-on-surface py-3 px-4 rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors active:scale-95 duration-150 min-h-[44px]">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+                    Open Gemini
+                </button>
+</div>
+</section>
+<!-- Secondary Actions -->
+<section class="flex flex-col sm:flex-row items-center justify-center gap-lg border-t border-surface-variant pt-lg mt-md">
+<button class="flex items-center gap-xs text-primary font-label-md text-label-md hover:underline hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+                Edit Responses
+            </button>
+<button class="flex items-center gap-xs text-on-surface-variant font-label-md text-label-md hover:underline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+                Regenerate Prompt
+            </button>
+</section>
+</main>
+</body></html>
