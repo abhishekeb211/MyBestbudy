@@ -53,7 +53,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
   const selectedMoodData = moodOptions.find((m) => m.rating === selectedMood);
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-10 space-y-8 animate-fade-in pb-28 md:pb-12">
+    <div className="w-full px-4 py-5 space-y-6 animate-fade-in pb-24">
       {/* Greeting Section */}
       <section className="space-y-1">
         <h1 className="font-headline font-bold text-2xl sm:text-4xl text-[#191c1c] tracking-tight">

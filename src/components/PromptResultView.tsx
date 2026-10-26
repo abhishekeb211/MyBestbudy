@@ -83,7 +83,7 @@ Please guide me through:
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-10 animate-fade-in pb-28 md:pb-12 space-y-6">
+    <div className="w-full px-4 py-5 animate-fade-in pb-24 space-y-5">
       {/* Header Bar */}
       <div className="flex items-center justify-between">
         <button

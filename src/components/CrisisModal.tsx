@@ -36,7 +36,7 @@ export const CrisisModal: React.FC<CrisisModalProps> = ({ isOpen, onClose, profi
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-start justify-center p-4 sm:p-6 animate-fade-in">
-      <div className="bg-[#f8f9f9] text-[#191c1c] w-full max-w-xl rounded-2xl sm:rounded-3xl shadow-2xl border border-[#bec8cb]/50 overflow-hidden my-4 sm:my-8">
+      <div className="bg-[#f8f9f9] text-[#191c1c] w-full max-w-md rounded-2xl sm:rounded-3xl shadow-2xl border border-[#bec8cb]/50 overflow-hidden my-4">
         {/* Modal Header */}
         <div className="bg-white px-5 py-4 border-b border-[#bec8cb]/30 flex items-center justify-between">
           <div className="flex items-center gap-2">

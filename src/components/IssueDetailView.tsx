@@ -14,7 +14,7 @@ export const IssueDetailView: React.FC<IssueDetailViewProps> = ({
   onStartQuestionnaire,
 }) => {
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-4 sm:py-8 space-y-8 animate-fade-in pb-28 md:pb-12">
+    <div className="w-full px-4 py-4 space-y-6 animate-fade-in pb-24">
       {/* Top Header / Back Nav */}
       <div className="flex items-center justify-between">
         <button

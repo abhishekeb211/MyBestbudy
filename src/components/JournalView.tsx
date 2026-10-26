@@ -54,15 +54,15 @@ export const JournalView: React.FC<JournalViewProps> = ({
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-10 space-y-8 animate-fade-in pb-28 md:pb-12">
+    <div className="w-full px-4 py-5 space-y-6 animate-fade-in pb-24">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="flex items-center justify-between gap-3">
         <div>
-          <h1 className="font-headline font-bold text-2xl sm:text-4xl text-[#191c1c] tracking-tight">
-            Reflective Journal
+          <h1 className="font-headline font-bold text-2xl text-[#191c1c] tracking-tight">
+            Reframing Journal
           </h1>
-          <p className="text-xs sm:text-sm text-[#3f484b] mt-0.5">
-            CBT Thought Records: Challenge automatic assumptions and find mental equilibrium.
+          <p className="text-xs text-[#3f484b] mt-0.5">
+            CBT & REBT thought reframing records.
           </p>
         </div>
 

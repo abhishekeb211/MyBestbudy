@@ -109,3 +109,17 @@ export interface ChatMessage {
   text: string;
   timestamp: string;
 }
+
+export interface Badge {
+  id: string;
+  title: string;
+  description: string;
+  category: 'quest' | 'mood' | 'journal' | 'prompt' | 'mindfulness';
+  icon: string;
+  targetCount: number;
+  currentCount: number;
+  isUnlocked: boolean;
+  unlockedDate?: string;
+  benefitTip: string;
+}
+

@@ -109,7 +109,7 @@ export const ChatView: React.FC<ChatViewProps> = ({ initialPrompt, profile, onOp
   ];
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4 sm:py-6 h-[calc(100vh-140px)] flex flex-col animate-fade-in pb-24 md:pb-6">
+    <div className="w-full px-4 py-3 h-[calc(100vh-125px)] flex flex-col animate-fade-in pb-20">
       {/* Chat Top Banner */}
       <div className="bg-white border border-[#bec8cb]/40 rounded-2xl p-4 mb-4 flex items-center justify-between shadow-xs">
         <div className="flex items-center gap-3">

@@ -30,14 +30,14 @@ export const ExploreView: React.FC<ExploreViewProps> = ({ onSelectIssue }) => {
   });
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-10 space-y-8 animate-fade-in pb-28 md:pb-12">
+    <div className="w-full px-4 py-5 space-y-6 animate-fade-in pb-24">
       {/* Header & Intro */}
-      <section className="text-center md:text-left space-y-2">
-        <h1 className="font-headline font-bold text-3xl sm:text-4xl lg:text-5xl text-[#191c1c] tracking-tight">
+      <section className="space-y-1">
+        <h1 className="font-headline font-bold text-2xl text-[#191c1c] tracking-tight">
           Explore Issues
         </h1>
-        <p className="text-base sm:text-lg text-[#3f484b] max-w-2xl">
-          Find evidence-informed resources, understand your feelings, and take the first step towards better mental well-being as an engineer.
+        <p className="text-xs text-[#3f484b]">
+          Find evidence-informed resources and take mindful steps towards well-being.
         </p>
       </section>
 

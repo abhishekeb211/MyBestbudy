@@ -333,7 +333,14 @@ Please provide compassionate, actionable advice structured in short, easy-to-rea
           />
         );
       case 'progress':
-        return <ProgressView quests={quests} moodHistory={moodHistory} />;
+        return (
+          <ProgressView
+            quests={quests}
+            moodHistory={moodHistory}
+            journalEntries={journalEntries}
+            savedPrompts={savedPrompts}
+          />
+        );
       case 'profile':
         return (
           <ProfileView
@@ -355,30 +362,33 @@ Please provide compassionate, actionable advice structured in short, easy-to-rea
   const isQuestionnaireActive = Boolean(questionnaireIssue);
 
   return (
-    <div className="min-h-screen bg-[#f8f9f9] text-[#191c1c] flex flex-col font-body antialiased">
-      {/* Top App Bar */}
-      <TopAppBar
-        activeTab={activeTab}
-        onNavigate={navigateTab}
-        onOpenCrisis={() => setIsCrisisModalOpen(true)}
-      />
+    <div className="min-h-screen bg-[#eaedef] text-[#191c1c] flex justify-center font-body antialiased selection:bg-[#2d7d8e] selection:text-white">
+      {/* Mobile Device Canvas (Constrained to mobile phone width) */}
+      <div className="w-full max-w-md bg-[#f8f9f9] min-h-screen relative shadow-2xl border-x border-[#bec8cb]/30 flex flex-col">
+        {/* Top App Bar */}
+        <TopAppBar
+          activeTab={activeTab}
+          onNavigate={navigateTab}
+          onOpenCrisis={() => setIsCrisisModalOpen(true)}
+        />
 
-      {/* Main Content Area */}
-      <main className="flex-1">
-        {renderCurrentView()}
-      </main>
+        {/* Main Content Area */}
+        <main className="flex-1 overflow-x-hidden">
+          {renderCurrentView()}
+        </main>
 
-      {/* Mobile Bottom Navigation (Shown unless inside 5-step questionnaire) */}
-      {!isQuestionnaireActive && (
-        <BottomNavBar activeTab={activeTab} onNavigate={navigateTab} />
-      )}
+        {/* Mobile Bottom Navigation (Shown unless inside 5-step questionnaire) */}
+        {!isQuestionnaireActive && (
+          <BottomNavBar activeTab={activeTab} onNavigate={navigateTab} />
+        )}
 
-      {/* Immediate Crisis Support Modal */}
-      <CrisisModal
-        isOpen={isCrisisModalOpen}
-        onClose={() => setIsCrisisModalOpen(false)}
-        profile={profile}
-      />
+        {/* Immediate Crisis Support Modal */}
+        <CrisisModal
+          isOpen={isCrisisModalOpen}
+          onClose={() => setIsCrisisModalOpen(false)}
+          profile={profile}
+        />
+      </div>
     </div>
   );
 }

@@ -17,8 +17,8 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({ activeTab, onNavigat
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-[#ffffff]/95 dark:bg-[#2e3131]/95 backdrop-blur-md border-t border-[#bec8cb]/30 shadow-[0_-4px_16px_rgba(8,104,120,0.08)] md:hidden">
-      <div className="grid grid-cols-6 items-center h-16 px-1 max-w-md mx-auto">
+    <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md z-40 bg-[#ffffff]/95 backdrop-blur-md border-t border-x border-[#bec8cb]/30 shadow-[0_-4px_16px_rgba(8,104,120,0.08)]">
+      <div className="grid grid-cols-6 items-center h-16 px-1">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.id;
           return (
